@@ -18,12 +18,14 @@
       "type": "string"
     },
     "windowsContainerdURL": {
+      "defaultValue": "",
       "metadata": {
         "description": "TODO: containerd - these binaries are not available yet"
       },
       "type": "string"
     },
     "windowsSdnPluginURL": {
+      "defaultValue": "",
       "metadata": {
         "description": "TODO: containerd - these binaries are not available yet"
       },
