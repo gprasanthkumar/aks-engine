@@ -36570,7 +36570,7 @@ ensureDocker() {
     DOCKER_MOUNT_FLAGS_SYSTEMD_FILE=/etc/systemd/system/docker.service.d/clear_mount_propagation_flags.conf
     {{- if HasKubeReservedCgroup}}
     DOCKER_SLICE_FILE=/etc/systemd/system/docker.service.d/kubereserved-slice.conf
-    wait_for_file 1200 1 $DOCKER_SLICE_FILE || exit {{GetCSEErrorCode "ERR_FILE_WATCH_TIMEOUT"}}
+    wait_for_file 1200 1 $DOCKER_SLICE_FILE || exit $ERR_FILE_WATCH_TIMEOUT
     {{- end}}
     DOCKER_JSON_FILE=/etc/docker/daemon.json
     for i in $(seq 1 1200); do
